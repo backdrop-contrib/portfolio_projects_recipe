@@ -292,6 +292,6 @@
     $layout->addBlock('views', 'portfolio_projects-block', 'content');
     $layout->save();
 
-    backdrop_set_message('The Service Sample Content module has create sample content on your site. You will need to remove this content manually when you are finished with it.', 'info');
+    backdrop_set_message('The Portfolio Projects Sample Content module has create sample content on your site. You will need to remove this content manually when you are finished with it.', 'info');
   }
 
