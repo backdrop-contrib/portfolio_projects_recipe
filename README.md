@@ -1,4 +1,4 @@
-Services Recipe
+Portfolio Projects Recipe
 ======================
 
 This recipe adds a content type and some views to managing and displaying 'services offered' by a digital agency or other organization.
@@ -6,11 +6,11 @@ This recipe was created as part of the Zeever theme project: https://github.com/
 
 This recipe creates
 
- - A Services content type
- - A page view and a block view of services offered.
+ - A Project content type
+ - A page view and a block view of portfolio projects.
  - A menu item in main menu.
 
- While some users may be happy with the configuration of this Services feature 
+ While some users may be happy with the configuration of this Portfolio Projects feature 
  exactly as defined in the recipe. We expect that most users will use 
  this recipe as a starting point and customize it to meet their unique needs. 
 
@@ -46,7 +46,7 @@ Issues
 ------
 
 Bugs and Feature requests should be reported in the Issue Queue:
-https://github.com/backdrop-contrib/services_recipe/issues.
+https://github.com/backdrop-contrib/portfolio_projects_recipe/issues
 
 Feedback
 --------
@@ -54,7 +54,7 @@ Feedback
 We are experimenting with config recipes and welcome your feedback. Please,
 let us know how this config recipe worked for you and how you think we 
 could improve it for other users in the future. 
-https://github.com/backdrop-contrib/services_recipe/issues/1
+https://github.com/backdrop-contrib/portfolio_projects_recipe/issues
 
 Current Maintainers
 -------------------
