@@ -1,20 +1,23 @@
 <?php
-  function services_sample_content_install() {
+  function portfolio_projects_sample_content_install() {
 
     // field_create_instance($instance);
-    $field_image_dir = 'public://services';
+    $field_image_dir = 'public://projects';
     file_prepare_directory($field_image_dir, FILE_CREATE_DIRECTORY);
 
-    $services = array(
-      'bulb.svg',
-      'design.svg',
-      'writing.svg',
+    $projects = array(
+      'educational-site-chatgpt.webp',
+      'techsite-chatgpt.webp',
+      'ecommerce-chatgpt.webp',
+      'photographer-website-chatgpt.webp',
+      'travel-blog-chatgpt.webp',
+      'bakery-site-chatgpt.webp',
     );
 
     $fids = [];
 
-    foreach ($services as $image_filename) {
-      $image_url = BACKDROP_ROOT . '/' . backdrop_get_path('module', 'services_sample_content') . '/' . 'images/'. $image_filename;
+    foreach ($projects as $image_filename) {
+      $image_url = BACKDROP_ROOT . '/' . backdrop_get_path('module', 'portfolio_projects_sample_content') . '/' . 'images/'. $image_filename;
       $moved_file = file_unmanaged_copy($image_url, $field_image_dir);
 
       $file = entity_create('file', array(
@@ -27,11 +30,11 @@
       $fids[] = $file->fid;
     }
 
-    // Make a service node.
-    $service = new Node(
+    // 1 - Make a project node.
+    $project = new Node(
       array(
-        'title' => st('Idea Generation'),
-        'field_services_image' => array(
+        'title' => st("Children's Educational Platform"),
+        'field_project_image' => array(
           LANGUAGE_NONE => array(
             array(
               'fid' => $fids[0],
@@ -41,25 +44,40 @@
         'body' => array(
           LANGUAGE_NONE => array(
             array(
-              'value' => st("<p>Idea generation services are a pivotal part of a web development company's offerings, helping businesses brainstorm and develop innovative concepts for their online presence. This service involves collaborative sessions with clients to explore new angles, address business challenges, and generate unique ideas that can set the brand apart. The process may include techniques such as brainstorming, mind mapping, and trend analysis to uncover creative solutions and strategies. By fostering a culture of creativity and strategic thinking, idea generation services enable businesses to conceptualize groundbreaking projects and marketing campaigns that resonate with their audience and drive growth.</p>"),
+              'value' => st("<p>A colorful and engaging website for a children's educational platform. It includes fun illustrations, interactive learning modules, and a section for parents' resources. The design aims to make learning fun and accessible for children while providing valuable information for parents.</p>"),
               'format' => 'filtered_html',
               'summary' => st("Idea generation services help businesses brainstorm and develop innovative concepts to create unique and effective online strategies."),
+            ),
+          ),
+        ),
+        'field_project_client' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("Bee Bop Dooley Dop"),
+            ),
+          ),
+        ),
+        'field_project_info_link' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'title' => st("Bee Bop Dooley Dop"),
+              'uri' => st("https://www.triplo.co"),
             ),
           ),
         ),
         'uid' => 1,
         'status' => 1,
         'promote' => 0,
-        'type' => 'service',
+        'type' => 'project',
       )
     );
-    $service->save();
+    $project->save();
 
-    // Make a service node.
-    $service = new Node(
+    // 2 - Make a project node.
+    $project = new Node(
       array(
-        'title' => st('Design'),
-        'field_services_image' => array(
+        'title' => st("Tech Startup"),
+        'field_project_image' => array(
           LANGUAGE_NONE => array(
             array(
               'fid' => $fids[1],
@@ -69,25 +87,40 @@
         'body' => array(
           LANGUAGE_NONE => array(
             array(
-              'value' => st("<p>Design services offered by a web development company encompass a wide range of creative solutions aimed at creating visually stunning and highly functional websites. This includes the creation of layouts, color schemes, typography, and graphics that align with the brand’s identity and appeal to the target audience. The design process often involves user interface (UI) and user experience (UX) design to ensure that the website is not only attractive but also intuitive and easy to navigate. Responsive design is a crucial aspect, ensuring that the website looks and functions well on various devices, from desktops to smartphones. By focusing on aesthetics and usability, design services help businesses create a memorable online presence that engages visitors and encourages interaction.</p>"),
+              'value' => st("<p>This modern and user-friendly website is designed for a tech startup. It features a sleek design, a section for showcasing products and services, and a team page with photos and bios. The design focuses on presenting the startup as innovative and professional.</p>"),
               'format' => 'filtered_html',
-              'summary' => st("Design services create visually stunning, user-friendly websites that align with the brand’s identity and ensure optimal functionality across all devices."),
+              'summary' => st("This modern and user-friendly website is designed for a tech startup."),
+            ),
+          ),
+        ),
+        'field_project_client' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("Widgets and Gizmos Galore"),
+            ),
+          ),
+        ),
+        'field_project_info_link' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'title' => st("Widgets and Gizmos Galore"),
+              'uri' => st("https://www.triplo.co"),
             ),
           ),
         ),
         'uid' => 1,
         'status' => 1,
         'promote' => 0,
-        'type' => 'service',
+        'type' => 'project',
       )
     );
-    $service->save();
+    $project->save();
 
-    // Make a service node.
-    $service = new Node(
+    // 3 - Make a project node.
+    $project = new Node(
       array(
-        'title' => st('Content Writing'),
-        'field_services_image' => array(
+        'title' => st("Handmade Jewelry E-Commerce Site"),
+        'field_project_image' => array(
           LANGUAGE_NONE => array(
             array(
               'fid' => $fids[2],
@@ -97,22 +130,166 @@
         'body' => array(
           LANGUAGE_NONE => array(
             array(
-              'value' => st("<p>Content writing services provided by a web development company focus on producing high-quality, engaging, and SEO-optimized written material tailored to the client's needs. These services include the creation of blog posts, articles, website content, social media posts, and marketing copy. Skilled content writers understand the importance of integrating relevant keywords to improve search engine rankings while maintaining a natural and engaging writing style. The content is crafted to reflect the brand's voice and objectives, providing valuable information that attracts and retains audience attention. Effective content writing can drive traffic, boost engagement, establish the business as an authority in its field, and ultimately lead to higher conversions and customer loyalty.</p>"),
+              'value' => st("<p>An elegant and minimalist e-commerce website for handmade jewelry. The site features high-quality images of products, a clean and simple layout, and an easy-to-use shopping cart. The design highlights the beauty and craftsmanship of the jewelry pieces.</p>"),
               'format' => 'filtered_html',
-              'summary' => st("Content writing services produce high-quality, SEO-optimized material that engages audiences and enhances the brand's online presence."),
+              'summary' => st("An elegant and minimalist e-commerce website for handmade jewelry."),
+            ),
+          ),
+        ),
+        'field_project_client' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("Pretty Ribbons and Rocks"),
+            ),
+          ),
+        ),
+        'field_project_info_link' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'title' => st("Pretty Ribbons and Rocks"),
+              'uri' => st("https://www.triplo.co"),
             ),
           ),
         ),
         'uid' => 1,
         'status' => 1,
         'promote' => 0,
-        'type' => 'service',
+        'type' => 'project',
       )
     );
-    $service->save();
+    $project->save();
+
+    // 4 - Make a project node.
+    $project = new Node(
+      array(
+        'title' => st("Travel Blog"),
+        'field_project_image' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'fid' => $fids[3],
+            ),
+          ),
+        ),
+        'body' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("<p>This dynamic and interactive website is perfect for a travel blog. It includes a map with travel destinations, a section for blog posts, and vibrant photos from different locations. The design aims to capture the excitement and diversity of travel experiences.</p>"),
+              'format' => 'filtered_html',
+              'summary' => st("This dynamic and interactive website is perfect for a travel blog."),
+            ),
+          ),
+        ),
+        'field_project_client' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("Horizen Travel Stories"),
+            ),
+          ),
+        ),
+        'field_project_info_link' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'title' => st("Horizen Travel Stories"),
+              'uri' => st("https://www.triplo.co"),
+            ),
+          ),
+        ),
+        'uid' => 1,
+        'status' => 1,
+        'promote' => 0,
+        'type' => 'project',
+      )
+    );
+    $project->save();
+
+    // 5 - Make a project node.
+    $project = new Node(
+      array(
+        'title' => st("Freelance Photographer Portfolio"),
+        'field_project_image' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'fid' => $fids[4],
+            ),
+          ),
+        ),
+        'body' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("<p>This sleek and professional portfolio website is designed for a freelance photographer. It features a fullscreen background image, a gallery of selected works, and a contact form. The design emphasizes the photographer's visual style and makes it easy for potential clients to get in touch.</p>"),
+              'format' => 'filtered_html',
+              'summary' => st("This sleek and professional portfolio website is designed for a freelance photographer."),
+            ),
+          ),
+        ),
+        'field_project_client' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("Adventure Photography"),
+            ),
+          ),
+        ),
+        'field_project_info_link' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'title' => st("Adventure Photography"),
+              'uri' => st("https://www.triplo.co"),
+            ),
+          ),
+        ),
+        'uid' => 1,
+        'status' => 1,
+        'promote' => 0,
+        'type' => 'project',
+      )
+    );
+    $project->save();
+
+    // 6 - Make a project node.
+    $project = new Node(
+      array(
+        'title' => st("Local Bakery Website"),
+        'field_project_image' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'fid' => $fids[5],
+            ),
+          ),
+        ),
+        'body' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("<p>This project features a clean and modern website for a local bakery. The design includes a banner with images of fresh pastries, a simple navigation menu, and a section showcasing the bakery's specialties. The focus is on providing a warm, inviting online presence for the bakery.</p>"),
+              'format' => 'filtered_html',
+              'summary' => st("This project features a clean and modern website for a local bakery."),
+            ),
+          ),
+        ),
+        'field_project_client' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'value' => st("Bella's Bakery"),
+            ),
+          ),
+        ),
+        'field_project_info_link' => array(
+          LANGUAGE_NONE => array(
+            array(
+              'title' => st("Bella's Bakery"),
+              'uri' => st("https://www.triplo.co"),
+            ),
+          ),
+        ),
+        'uid' => 1,
+        'status' => 1,
+        'promote' => 0,
+        'type' => 'project',
+      )
+    );
+    $project->save();
 
     $layout = layout_load('home');
-    $layout->addBlock('views', 'services-block_1', 'content');
+    $layout->addBlock('views', 'portfolio_projects-block', 'content');
     $layout->save();
 
     backdrop_set_message('The Service Sample Content module has create sample content on your site. You will need to remove this content manually when you are finished with it.', 'info');

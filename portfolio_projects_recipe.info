@@ -1,6 +1,6 @@
 type = module
-name = Services Recipe
-description = A recipe to build a content type and views to organize the services your organization offers.
+name = Portfolio Projects Recipe
+description = A recipe to build a content type and views to organize projects for a portfolio.
 package = Recipes
 backdrop = 1.x
 
