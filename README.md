@@ -1,8 +1,8 @@
 Portfolio Projects Recipe
 ======================
 
-This recipe adds a content type and some views to managing and displaying portfolio items by a digital agency or other organization.
-This recipe was created as part of the Zeever theme project: https://github.com/stpaultim/zeever/wiki
+This recipe adds a content type and some views for managing and displaying portfolio items by a digital agency or other organization.
+This recipe was created as part of the Zeever theme project: https://github.com/backdrop-contrib/zeever/wiki
 
 This recipe creates
 
