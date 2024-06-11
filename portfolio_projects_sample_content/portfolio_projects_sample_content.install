@@ -60,7 +60,7 @@
         'field_project_info_link' => array(
           LANGUAGE_NONE => array(
             array(
-              'title' => st("Bee Bop Dooley Dop"),
+              'title' => st("Triplo Web Design"),
               'url' => st("https://www.triplo.co"),
             ),
           ),
@@ -103,7 +103,7 @@
         'field_project_info_link' => array(
           LANGUAGE_NONE => array(
             array(
-              'title' => st("Widgets and Gizmos Galore"),
+              'title' => st("Simplo Websites"),
               'url' => st("https://www.simplo.site"),
             ),
           ),
@@ -146,8 +146,8 @@
         'field_project_info_link' => array(
           LANGUAGE_NONE => array(
             array(
-              'title' => st("Pretty Ribbons and Rocks"),
-              'url' => st("https://www.triplo.co"),
+              'title' => st("Learn Backdrop CMS"),
+              'url' => st("https://learn-backdrop.simplo.site/"),
             ),
           ),
         ),
@@ -189,7 +189,7 @@
         'field_project_info_link' => array(
           LANGUAGE_NONE => array(
             array(
-              'title' => st("Horizen Travel Stories"),
+              'title' => st("Simplo Sites"),
               'url' => st("https://www.simplo.site"),
             ),
           ),
@@ -232,7 +232,7 @@
         'field_project_info_link' => array(
           LANGUAGE_NONE => array(
             array(
-              'title' => st("Adventure Photography"),
+              'title' => st("Triplo Web Design"),
               'url' => st("https://www.triplo.co"),
             ),
           ),
@@ -275,8 +275,8 @@
         'field_project_info_link' => array(
           LANGUAGE_NONE => array(
             array(
-              'title' => st("Bella's Bakery"),
-              'url' => st("https://www.simplo.site"),
+              'title' => st("Theme Switcher"),
+              'url' => st("https://themeswitcher.simplo.site/"),
             ),
           ),
         ),
