@@ -61,7 +61,7 @@
           LANGUAGE_NONE => array(
             array(
               'title' => st("Bee Bop Dooley Dop"),
-              'uri' => st("https://www.triplo.co"),
+              'url' => st("https://www.triplo.co"),
             ),
           ),
         ),
@@ -104,7 +104,7 @@
           LANGUAGE_NONE => array(
             array(
               'title' => st("Widgets and Gizmos Galore"),
-              'uri' => st("https://www.triplo.co"),
+              'url' => st("https://www.simplo.site"),
             ),
           ),
         ),
@@ -147,7 +147,7 @@
           LANGUAGE_NONE => array(
             array(
               'title' => st("Pretty Ribbons and Rocks"),
-              'uri' => st("https://www.triplo.co"),
+              'url' => st("https://www.triplo.co"),
             ),
           ),
         ),
@@ -190,7 +190,7 @@
           LANGUAGE_NONE => array(
             array(
               'title' => st("Horizen Travel Stories"),
-              'uri' => st("https://www.triplo.co"),
+              'url' => st("https://www.simplo.site"),
             ),
           ),
         ),
@@ -233,7 +233,7 @@
           LANGUAGE_NONE => array(
             array(
               'title' => st("Adventure Photography"),
-              'uri' => st("https://www.triplo.co"),
+              'url' => st("https://www.triplo.co"),
             ),
           ),
         ),
@@ -276,7 +276,7 @@
           LANGUAGE_NONE => array(
             array(
               'title' => st("Bella's Bakery"),
-              'uri' => st("https://www.triplo.co"),
+              'url' => st("https://www.simplo.site"),
             ),
           ),
         ),
