@@ -289,7 +289,7 @@
     $project->save();
 
     $layout = layout_load('home');
-    $layout->addBlock('views', 'portfolio_projects-block', 'content');
+    $layout->addBlock('views', 'portfolio_projects-block_1', 'content');
     $layout->save();
 
     backdrop_set_message('The Portfolio Projects Sample Content module has create sample content on your site. You will need to remove this content manually when you are finished with it.', 'info');
